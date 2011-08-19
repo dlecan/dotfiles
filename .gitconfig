@@ -16,4 +16,16 @@
 	ci = commit
 	cia = commit -a
 	st = status
-	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&lt;%an&gt;%Creset' --abbrev-commit --date=relative
+	amend = commit --amend
+	who = shortlog -sne
+	oneline = log --pretty=oneline --abbrev-commit --graph
+	changes = diff --name-status
+	dic = diff --cached
+	diffstat = diff --stat
+	undo = git reset --soft HEAD^
+	lc = !git oneline ORIG_HEAD.. --stat --no-merges
+	addm = !git-ls-files -m -z | xargs -0 git-add && git status                     # ajouter les fichiers modifiés.
+	addu = !git-ls-files -o --exclude-standard -z | xargs -0 git-add && git status  # ajouter les fichiers inconnus.
+	rmm  = !git ls-files -d -z | xargs -0 git-rm && git status                      # supprimer les fichiers marqués
+	                                                                                # comme effacés.
+	
