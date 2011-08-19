@@ -1,0 +1,19 @@
+[user]
+	name = Damien Lecan
+	email = dev@dlecan.com
+[branch]
+	autosetuprebase = always
+[merge]
+        tool = winmerge
+[mergetool "winmerge"]
+        cmd = 'C:/Program Files/WinMerge/WinMergeU.exe' \"$MERGED\"
+[color]
+        diff = auto
+        status = auto
+        branch = auto
+[alias]
+	co = checkout
+	ci = commit
+	cia = commit -a
+	st = status
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&lt;%an&gt;%Creset' --abbrev-commit --date=relative
