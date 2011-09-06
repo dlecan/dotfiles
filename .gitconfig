@@ -12,20 +12,41 @@
         status = auto
         branch = auto
 [alias]
-	co = checkout
-	ci = commit
-	cia = commit -a
-	st = status
-	amend = commit --amend
-	who = shortlog -sne
-	oneline = log --pretty=oneline --abbrev-commit --graph
-	changes = diff --name-status
-	dic = diff --cached
-	diffstat = diff --stat
-	undo = git reset --soft HEAD^
-	lc = !git oneline ORIG_HEAD.. --stat --no-merges
-	addm = !git-ls-files -m -z | xargs -0 git-add && git status                     # ajouter les fichiers modifiés.
-	addu = !git-ls-files -o --exclude-standard -z | xargs -0 git-add && git status  # ajouter les fichiers inconnus.
-	rmm  = !git ls-files -d -z | xargs -0 git-rm && git status                      # supprimer les fichiers marqués
-	                                                                                # comme effacés.
-	
+    co = checkout
+    ci = commit
+    cia = !git add -A && git commit
+    br = branch
+    df = diff
+    st = status
+
+    amend = commit --amend
+    who = shortlog -s --
+    changes = diff --name-status -r
+    dic = diff --cached
+    diffstat = diff --stat -r
+    undo = !git reset --soft HEAD^
+    unstage = reset HEAD --
+
+    # 2 logs avec visualisation des branches
+    # Long
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+    # Court
+    oneline = log --pretty=oneline --abbrev-commit --graph --decorate
+
+    # Un 'status' concis
+    s = "!git diff --name-status | sed -e 's/^/W /' ; git diff --cached --name-status | sed -e 's/^/C /'"
+
+    emerge = merge --no-ff
+
+    # ajouter les fichiers modifies.
+    addm = !git-ls-files -m -z | xargs -0 git-add && git status
+
+    # ajouter les fichiers inconnus.
+    addu = !git-ls-files -o --exclude-standard -z | xargs -0 git-add && git status
+
+    # supprimer les fichiers marques comme effaces.
+    rmm  = !git ls-files -d -z | xargs -0 git-rm && git status
+
+    # Commandes SVN
+    svnc = svn dcommit
+    svnu = svn rebase
