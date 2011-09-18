@@ -15,11 +15,11 @@
     enabled = true
 
 [merge]
-    # Valable uniquemet � partir de Git 1.7.6
+    # Valable uniquemet a partir de Git 1.7.6
     ff = false
 
 [core]
-    # Gros doute sur la validit� de cette option car non pr�sente dans la doc de GIT
+    # Gros doute sur la validite de cette option car non presente dans la doc de GIT
     mergeoptions = --no-ff
 
 [alias]
@@ -49,13 +49,13 @@
 
     emerge = merge --no-ff
 
-    # ajouter les fichiers modifi�s.
+    # ajouter les fichiers modifies.
     addm = !git-ls-files -m -z | xargs -0 git-add && git status
 
     # ajouter les fichiers inconnus.
     addu = !git-ls-files -o --exclude-standard -z | xargs -0 git-add && git status
 
-    # supprimer les fichiers marqu�s comme effac�s.
+    # supprimer les fichiers marques comme effaces.
     rmm  = !git ls-files -d -z | xargs -0 git-rm && git status
 
     # Commandes SVN
