@@ -1,22 +1,33 @@
 [user]
-	name = Damien Lecan
-	email = dev@dlecan.com
+    name = Damien Lecan
+    email = dev@dlecan.com
+
 [branch]
-	autosetuprebase = always
-[merge]
-        tool = winmerge
-[mergetool "winmerge"]
-        cmd = 'C:/Program Files/WinMerge/WinMergeU.exe' \"$MERGED\"
+    autosetuprebase = always
+
 [color]
-        diff = auto
-        status = auto
-        branch = auto
+    diff = auto
+    status = auto
+    branch = auto
+    interactive = auto
+
+[rerere]
+    enabled = true
+
+[merge]
+    # Valable uniquemet a partir de Git 1.7.6
+    ff = false
+
+[core]
+    # Gros doute sur la validite de cette option car non presente dans la doc de GIT
+    mergeoptions = --no-ff
+
 [alias]
     co = checkout
     ci = commit
     cia = !git add -A && git commit
     br = branch
-    df = diff
+	df = diff
     st = status
 
     amend = commit --amend
