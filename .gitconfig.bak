@@ -50,7 +50,7 @@
     lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
     # Court
     oneline = log --pretty=oneline --abbrev-commit --graph --decorate
-    # Long avec fichiers modifies
+    # Long avec fichiers modifiés
     lgf = log --name-status --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --date=relative
     # Long avec message de commit complet
     flg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --date=relative
@@ -81,4 +81,4 @@
      
     # Pull submodules from origin master
     pullsub = submodule foreach "git pull origin master"
-
+    
