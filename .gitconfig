@@ -27,22 +27,29 @@
     ci = commit
     cia = !git add -A && git commit
     br = branch
-	df = diff
+    df = diff
     st = status
 
     amend = commit --amend
     who = shortlog -s --
     changes = diff --name-status -r
     dic = diff --cached
-    diffstat = diff --stat -r
+    ds = diff --stat -r
     undo = !git reset --soft HEAD^
     unstage = reset HEAD --
+
+    # Affiche le diff avant pull
+    do = diff --name-status -r ORIG_HEAD HEAD
 
     # 2 logs avec visualisation des branches
     # Long
     lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
     # Court
     oneline = log --pretty=oneline --abbrev-commit --graph --decorate
+    # Long avec fichiers modifies
+    lgf = log --name-status --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --date=relative
+    # Long avec message de commit complet
+    flg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --date=relative
 
     # Un 'status' concis
     s = "!git diff --name-status | sed -e 's/^/W /' ; git diff --cached --name-status | sed -e 's/^/C /'"
@@ -56,8 +63,17 @@
     addu = !git-ls-files -o --exclude-standard -z | xargs -0 git-add && git status
 
     # supprimer les fichiers marques comme effaces.
-    rmm  = !git ls-files -d -z | xargs -0 git-rm && git status
+    rmm = !git ls-files -d -z | xargs -0 git-rm && git status
 
     # Commandes SVN
     svnc = svn dcommit
     svnu = svn rebase
+    
+    # Init et update des submodules
+    pup = "!git submodule init && git submodule update"
+
+    # Pushs all submodules to origin master
+    pushsub = submodule foreach "git push origin master"
+     
+    # Pull submodules from origin master
+    pullsub = submodule foreach "git pull origin master"
