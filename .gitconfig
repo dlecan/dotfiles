@@ -10,6 +10,7 @@
     status = auto
     branch = auto
     interactive = auto
+    ui = auto
 
 [rerere]
     enabled = true
@@ -18,9 +19,17 @@
     # Valable uniquemet a partir de Git 1.7.6
     ff = false
 
-[core]
-    # Gros doute sur la validite de cette option car non presente dans la doc de GIT
-    mergeoptions = --no-ff
+[diff]
+    mnemonicprefix = true
+
+[help]
+    autocorrect = -1
+
+[push]
+    default = upstream
+
+[rebase]
+    autostash = true
 
 [alias]
     co = checkout
@@ -35,6 +44,7 @@
     changes = diff --name-status -r
     dic = diff --cached
     ds = diff --stat -r
+    wdiff = diff --word-diff
     undo = !git reset --soft HEAD^
     unstage = reset HEAD --
 
