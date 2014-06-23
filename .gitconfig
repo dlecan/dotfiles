@@ -25,6 +25,9 @@
 [help]
     autocorrect = -1
 
+[pull]
+    rebase = preserve
+
 [push]
     default = upstream
 
