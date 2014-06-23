@@ -90,3 +90,5 @@
      
     # Pull submodules from origin master
     pullsub = submodule foreach "git pull origin master"
+[credential]
+	helper = cache --timeout=3600
