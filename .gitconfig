@@ -29,7 +29,7 @@
     rebase = preserve
 
 [push]
-    default = upstream
+    default = simple
 
 [rebase]
     autostash = true
