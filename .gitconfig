@@ -15,10 +15,6 @@
 [rerere]
     enabled = true
 
-[merge]
-    # Valable uniquemet a partir de Git 1.7.6
-    ff = false
-
 [diff]
     mnemonicprefix = true
 
@@ -70,13 +66,13 @@
     emerge = merge --no-ff
 
     # ajouter les fichiers modifies.
-    addm = !git-ls-files -m -z | xargs -0 git-add && git status
+    addm = !git-ls-files -m -z | xargs -0 git add && git status
 
     # ajouter les fichiers inconnus.
-    addu = !git-ls-files -o --exclude-standard -z | xargs -0 git-add && git status
+    addu = !git-ls-files -o --exclude-standard -z | xargs -0 git add && git status
 
     # supprimer les fichiers marques comme effaces.
-    rmm = !git ls-files -d -z | xargs -0 git-rm && git status
+    rmm = !git ls-files -d -z | xargs -0 git rm && git status
 
     # Commandes SVN
     svnc = svn dcommit
@@ -90,5 +86,10 @@
      
     # Pull submodules from origin master
     pullsub = submodule foreach "git pull origin master"
+	webui = !/home/dlecan/.git-webui/release/libexec/git-core/git-webui
 [credential]
-	helper = cache --timeout=3600
+	helper = cache --timeout=259200
+[webui]
+	autoupdate = true
+[status]
+	submoduleSummary = true
