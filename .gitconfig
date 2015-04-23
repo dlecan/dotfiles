@@ -17,6 +17,7 @@
 
 [diff]
     mnemonicprefix = true
+	submodule = log
 
 [help]
     autocorrect = -1
@@ -93,3 +94,5 @@
 	autoupdate = true
 [status]
 	submoduleSummary = true
+[fetch]
+	recurseSubmodules = =
