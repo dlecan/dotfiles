@@ -87,7 +87,8 @@
      
     # Pull submodules from origin master
     pullsub = submodule foreach "git pull origin master"
-	webui = !/home/dlecan/.git-webui/release/libexec/git-core/git-webui
+ 
+    webui = !/home/dlecan/.git-webui/release/libexec/git-core/git-webui
 [credential]
 	helper = cache --timeout=259200
 [webui]
@@ -95,4 +96,4 @@
 [status]
 	submoduleSummary = true
 [fetch]
-	recurseSubmodules = =
+	recurseSubmodules = on-demand
