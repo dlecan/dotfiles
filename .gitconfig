@@ -1,6 +1,7 @@
 [user]
     name = Damien Lecan
     email = dev@dlecan.com
+	signingkey = 1D71DF68
 
 [branch]
     autosetuprebase = always
@@ -95,5 +96,8 @@
 	autoupdate = true
 [status]
 	submoduleSummary = true
+	showUntrackedFiles = all
 [fetch]
 	recurseSubmodules = on-demand
+[log]
+	abbrevCommit = true
