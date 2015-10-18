@@ -15,3 +15,6 @@ trim_trailing_whitespace = false
 
 [**.html]
 insert_final_newline = false
+
+[**.rs]
+indent_size = 4
