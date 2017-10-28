@@ -1,0 +1,14 @@
+{
+    "window.zoomLevel": 2,
+    "rust.mode": "rls",
+    "rust.rustup": {
+        "nightlyToolchain": "nightly-2017-05-03-x86_64-unknown-linux-gnu"
+    },
+    "rust.rls": {
+        "useRustfmt": true
+    },
+    "extensions.ignoreRecommendations": false,
+    "update.channel": "none",
+    "vsicons.dontShowNewVersionMessage": true,
+    "workbench.iconTheme": "vscode-icons"
+}
