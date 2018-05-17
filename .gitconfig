@@ -21,7 +21,7 @@
 
 [diff]
     mnemonicprefix = true
-	submodule = log
+    submodule = log
 
 [help]
     autocorrect = -1
@@ -79,40 +79,45 @@
     # supprimer les fichiers marques comme effaces.
     rmm = !git ls-files -d -z | xargs -0 git rm && git status
 
-    # Commandes SVN
-    svnc = svn dcommit
-    svnu = svn rebase
-    
     # Init et update des submodules
     pup = "!git submodule init && git submodule update"
 
     # Pushs all submodules to origin master
     pushsub = submodule foreach "git push origin master"
-     
+
     # Pull submodules from origin master
     pullsub = submodule foreach "git pull origin master"
- 
-    webui = !/home/dlecan/.git-webui/release/libexec/git-core/git-webui
+
+    # Update local and remote branches
+    rup = remote update -p
+
 [credential]
 	helper = cache --timeout=259200
+
 [webui]
 	autoupdate = true
+
 [status]
 	submoduleSummary = true
 	showUntrackedFiles = all
+
 [fetch]
 	recurseSubmodules = on-demand
+
 [log]
 	abbrevCommit = true
+
 [filter "lfs"]
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f
 	required = true
+
 [color "diff-highlight"]
 	oldNormal = red bold
 	oldHighlight = red bold 52
 	newNormal = green bold
 	newHighlight = green bold 22
+
 [pager]
 	diff = diff-so-fancy | less --tabs=1,5 -RFX
 	show = diff-so-fancy | less --tabs=1,5 -RFX
