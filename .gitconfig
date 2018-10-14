@@ -66,7 +66,7 @@
     flg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --date=relative
 
     # Un 'status' concis
-    s = "!git diff --name-status | sed -e 's/^/W /' ; git diff --cached --name-status | sed -e 's/^/C /'"
+    s = "status --short"
 
     emerge = merge --no-ff
 
