@@ -1,5 +1,5 @@
 {
-    "window.zoomLevel": 1,
+    "window.zoomLevel": 0,
     "rust.mode": "rls",
     "rust.rustup": {
         "nightlyToolchain": "nightly-2017-05-03-x86_64-unknown-linux-gnu"
@@ -12,13 +12,47 @@
     "vsicons.dontShowNewVersionMessage": true,
     "workbench.iconTheme": "vscode-icons",
     "workbench.colorCustomizations": {
-        "editorActiveLineNumber.foreground": "#ffffff"
+        "editorLineNumber.activeForeground": "#ffffff"
     },
     "files.autoSave": "off",
     // Set the default
     "editor.formatOnSave": false,
     // Enable per-language
     "[typescript]": {
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        }
+    },
+    "[javascript]": {
         "editor.formatOnSave": true
-    }
+    },
+    "[json]": {
+        "editor.formatOnSave": true
+    },
+    "[vue]": {
+        "editor.formatOnSave": true,
+    },
+    "[html]": {
+        "editor.formatOnSave": true
+    },
+    "[scss]": {
+        "editor.formatOnSave": true
+    },
+    "gitlens.advanced.messages": {
+        "suppressShowKeyBindingsNotice": true
+    },
+    "gitlens.historyExplorer.enabled": true,
+    "html.format.contentUnformatted": "pre,code,textarea,title",
+    "javascript.implicitProjectConfig.experimentalDecorators": true,
+    "breadcrumbs.enabled": true,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "cSpell.language": "en,fr",
+    "cSpell.userWords": [
+        "circleci",
+        "netlify",
+        "spacelephant",
+        "unik",
+        "unikname"
+    ],
 }
