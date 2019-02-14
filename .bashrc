@@ -126,3 +126,8 @@ export NVM_DIR="$HOME/.nvm"
 if [ -f ~/.my-git-bash-configuration ]; then
     . ~/.my-git-bash-configuration
 fi
+
+
+if [ -f /usr/share/autojump/autojump.sh ]; then
+    . /usr/share/autojump/autojump.sh
+fi
