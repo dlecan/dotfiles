@@ -1,7 +1,7 @@
 [user]
     name = Damien Lecan
     email = dev@dlecan.com
-	signingkey = 1D71DF68
+	  signingkey = B9E1EE3FE5697052
 
 [branch]
     autosetuprebase = always
