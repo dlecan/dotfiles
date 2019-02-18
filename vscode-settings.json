@@ -35,7 +35,7 @@
     "editor.formatOnSave": true
   },
   "[vue]": {
-    "editor.formatOnSave": true,
+    "editor.formatOnSave": true
   },
   "[html]": {
     "editor.formatOnSave": true
@@ -63,5 +63,9 @@
   "extension-manager.extensions": [
     "editorconfig.editorconfig",
     "eamodio.gitlens",
-  ],
+    "esbenp.prettier-vscode",
+    "streetsidesoftware.code-spell-checker-french",
+    "mauve.terraform",
+    "octref.vetur"
+  ]
 }
