@@ -3,7 +3,7 @@
 // Windows %APPDATA%\Code\User\settings.json
 // Mac $HOME/Library/Application Support/Code/User/settings.json
 {
-  "window.zoomLevel": 0,
+  "window.zoomLevel": 1,
   "rust.mode": "rls",
   "rust.rustup": {
     "nightlyToolchain": "nightly-2017-05-03-x86_64-unknown-linux-gnu"

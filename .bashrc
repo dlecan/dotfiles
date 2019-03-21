@@ -131,3 +131,8 @@ fi
 if [ -f /usr/share/autojump/autojump.sh ]; then
     . /usr/share/autojump/autojump.sh
 fi
+
+
+if [ -f ~/.spacelephant-env ]; then
+    . ~/.spacelephant-env
+fi
