@@ -13,8 +13,6 @@
   },
   "extensions.ignoreRecommendations": false,
   "update.channel": "none",
-  "vsicons.dontShowNewVersionMessage": true,
-  "workbench.iconTheme": "vscode-icons",
   "workbench.colorCustomizations": {
     "editorLineNumber.activeForeground": "#ffffff"
   },
@@ -32,7 +30,8 @@
     "editor.formatOnSave": true
   },
   "[json]": {
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[vue]": {
     "editor.formatOnSave": true
@@ -70,5 +69,18 @@
     "mauve.terraform",
     "octref.vetur",
     "robertohuertasm.vscode-icons"
-  ]
+  ],
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
+  },
+  "workbench.enableExperiments": false,
+  "telemetry.enableTelemetry": false,
+  "cSpell.allowCompoundWords": true,
+  "cSpell.enabled": false,
+  "search.followSymlinks": false
 }

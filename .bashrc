@@ -116,23 +116,11 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-
-if [ -f ~/.my-git-bash-configuration ]; then
-    . ~/.my-git-bash-configuration
-fi
-
-
-if [ -f /usr/share/autojump/autojump.sh ]; then
-    . /usr/share/autojump/autojump.sh
-fi
-
-
-if [ -f ~/.spacelephant-env ]; then
-    . ~/.spacelephant-env
+if [ -e "$HOME/.bashrc.d" ]; then
+    SCRIPTS=$(find -L "$HOME/.bashrc.d/enabled" -name "*.sh" -print)
+    for f in $SCRIPTS; do
+        if [ -r "$f" ]; then
+            . "$f"
+        fi
+    done
 fi

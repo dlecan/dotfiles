@@ -20,4 +20,3 @@ fi
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
-eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
