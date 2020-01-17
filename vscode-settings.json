@@ -3,7 +3,7 @@
 // Windows %APPDATA%\Code\User\settings.json
 // Mac $HOME/Library/Application Support/Code/User/settings.json
 {
-  "window.zoomLevel": 1,
+  "window.zoomLevel": 0,
   "rust.mode": "rls",
   "rust.rustup": {
     "nightlyToolchain": "nightly-2017-05-03-x86_64-unknown-linux-gnu"
@@ -23,11 +23,13 @@
   "[typescript]": {
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
-      "source.organizeImports": true
-    }
+      "source.organizeImports": false
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[javascript]": {
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[json]": {
     "editor.formatOnSave": true,
@@ -82,5 +84,29 @@
   "telemetry.enableTelemetry": false,
   "cSpell.allowCompoundWords": true,
   "cSpell.enabled": false,
-  "search.followSymlinks": false
+  "search.followSymlinks": false,
+  "vsicons.projectDetection.autoReload": true,
+  "workbench.iconTheme": "vscode-icons",
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "vsicons.dontShowNewVersionMessage": true,
+  "terraform.indexing": {
+    "enabled": false,
+    "liveIndexing": false,
+    "delay": 500,
+    "exclude": [
+      ".terraform/**/*",
+      "**/.terraform/**/*"
+    ]
+  },
+  "terraform.languageServer": {
+    "enabled": true,
+    "args": []
+  },
+  "typescript.tsdk": "/home/dlecan/.config/yarn/global/node_modules/typescript/lib/",
+  "files.associations": {
+    "*.mmd": "Mermaid"
+  },
+  "editor.mouseWheelZoom": true
 }
