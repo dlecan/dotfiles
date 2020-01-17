@@ -16,8 +16,8 @@ HISTCONTROL=ignoreboth
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=10000
-HISTFILESIZE=20000
+HISTSIZE=20000
+HISTFILESIZE=30000
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -117,10 +117,13 @@ if ! shopt -oq posix; then
 fi
 
 if [ -e "$HOME/.bashrc.d" ]; then
-    SCRIPTS=$(find -L "$HOME/.bashrc.d/enabled" -name "*.sh" -print)
-    for f in $SCRIPTS; do
-        if [ -r "$f" ]; then
-            . "$f"
-        fi
-    done
+  SCRIPTS=$(find -L "$HOME/.bashrc.d/enabled" -name "*.sh" -print | sort)
+  for f in $SCRIPTS; do
+    if [ -r "$f" ]; then
+      . "$f"
+    fi
+  done
 fi
+
+# Mainly for 'ls': dispay ISO dates
+export TIME_STYLE=long-iso
