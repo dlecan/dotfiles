@@ -3,6 +3,18 @@
     email = dev@dlecan.com
 	  signingkey = B9E1EE3FE5697052
 
+[includeIf "gitdir:~/dev/unikname/"]
+    path = ~/.gitconfig-work
+
+[includeIf "gitdir:~/dev/uns/"]
+    path = ~/.gitconfig-work
+
+[includeIf "gitdir:~/dev/spacelephant/"]
+    path = ~/.gitconfig-work
+
+[includeIf "gitdir:~/dev/work/"]
+    path = ~/.gitconfig-work
+
 [branch]
     autosetuprebase = always
 
@@ -31,6 +43,7 @@
 
 [push]
     default = simple
+	followTags = true
 
 [rebase]
     autostash = true
