@@ -25,3 +25,14 @@ indent_size = 4
 [{Makefile,**.mk}]
 # Use tabs for indentation (Makefiles require tabs)
 indent_style = tab
+
+[**.toml]
+indent_size = 2
+
+[*.{kt,kts}]
+indent_size = 4
+# true (recommended) / false
+insert_final_newline = true
+# possible values: number (e.g. 120) (package name, imports & comments are ignored), "off"
+# it's automatically set to 100 on `ktlint --android ...` (per Android Kotlin Style Guide)
+max_line_length = off

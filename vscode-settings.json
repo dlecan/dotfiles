@@ -3,16 +3,7 @@
 // Windows %APPDATA%\Code\User\settings.json
 // Mac $HOME/Library/Application Support/Code/User/settings.json
 {
-  "window.zoomLevel": 1,
-  "rust.mode": "rls",
-  "rust.rustup": {
-    "nightlyToolchain": "nightly-2017-05-03-x86_64-unknown-linux-gnu"
-  },
-  "rust.rls": {
-    "useRustfmt": true
-  },
   "extensions.ignoreRecommendations": false,
-  "update.channel": "none",
   "workbench.colorCustomizations": {
     "editorLineNumber.activeForeground": "#ffffff"
   },
@@ -36,7 +27,8 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[vue]": {
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[html]": {
     "editor.formatOnSave": true,
@@ -56,10 +48,17 @@
   "cSpell.language": "en,fr",
   "cSpell.userWords": [
     "circleci",
+    "emblock",
     "ethereum",
+    "evht",
+    "gcloud",
+    "Lecan",
+    "matomo",
+    "merkle",
     "netlify",
     "oidc",
     "spacelephant",
+    "spacelephantlabs",
     "unik",
     "unikname"
   ],
@@ -79,13 +78,30 @@
     "**/.classpath": true,
     "**/.project": true,
     "**/.settings": true,
-    "**/.factorypath": true
+    "**/.factorypath": true,
+    "**/tmp/**": true,
+    "**/node_modules/**": true,
+    "**/.git/objects/**": true,
+  },
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/**": true,
+    "**/tmp/**": true,
+    "**/dist/**": true
   },
   "workbench.enableExperiments": false,
   "telemetry.enableTelemetry": false,
   "cSpell.allowCompoundWords": true,
   "cSpell.enabled": false,
   "search.followSymlinks": false,
+  "search.exclude": {
+    "**/node_modules/**": true,
+    "**/dist/**": true,
+    "**/tmp/**": true,
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true
+  },
   "vsicons.projectDetection.autoReload": true,
   "workbench.iconTheme": "vscode-icons",
   "[jsonc]": {
@@ -113,9 +129,23 @@
   },
   "editor.mouseWheelZoom": true,
   "editor.fontFamily": "'JetBrains Mono, Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+  "editor.fontLigatures": true,
   "editor.fontSize": 13,
   "editor.fontWeight": "300",
   "editor.lineHeight": 22,
   "editor.letterSpacing": 1.2,
-  "editor.renderLineHighlight": "all"
+  "editor.renderLineHighlight": "all",
+  "workbench.editor.decorations.badges": true,
+  "workbench.editor.decorations.colors": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "editor.bracketPairColorization.enabled": true,
+  "editor.inlineSuggest.enabled": true,
+  "workbench.startupEditor": "none",
+  "gitlens.defaultDateShortFormat": "YYYY-MM-DD",
+  "javascript.preferences.importModuleSpecifierEnding": "js",
+  "typescript.preferences.importModuleSpecifierEnding": "js",
+  "window.zoomLevel": 1,
+  "GitLive.Issue tracker integration": "Disabled",
+  "GitLive.Hide my activity graph": true,
+  "git.autofetch": true
 }

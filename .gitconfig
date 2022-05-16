@@ -3,17 +3,20 @@
     email = dev@dlecan.com
 	  signingkey = B9E1EE3FE5697052
 
-[includeIf "gitdir:~/dev/unikname/"]
-    path = ~/.gitconfig-work
+[includeIf "gitdir:~/dev/emblock/"]
+    path = ~/.gitconfig-eb
 
-[includeIf "gitdir:~/dev/uns/"]
-    path = ~/.gitconfig-work
-
-[includeIf "gitdir:~/dev/spacelephant/"]
-    path = ~/.gitconfig-work
-
-[includeIf "gitdir:~/dev/work/"]
-    path = ~/.gitconfig-work
+#[includeIf "gitdir:~/dev/unikname/"]
+#    path = ~/.gitconfig-work
+#
+#[includeIf "gitdir:~/dev/unn/"]
+#    path = ~/.gitconfig-work
+#
+#[includeIf "gitdir:~/dev/spacelephant/"]
+#    path = ~/.gitconfig-work
+#
+#[includeIf "gitdir:~/dev/work/"]
+#    path = ~/.gitconfig-work
 
 [branch]
     autosetuprebase = always
@@ -23,7 +26,7 @@
     status = auto
     branch = auto
     interactive = auto
-    ui = auto
+	ui = true
 
 [commit]
 	gpgsign = true
@@ -33,13 +36,13 @@
 
 [diff]
     mnemonicprefix = true
-    submodule = log
+	submodule = log
 
 [help]
     autocorrect = -1
 
 [pull]
-    rebase = preserve
+    rebase = merges
 
 [push]
     default = simple
@@ -116,6 +119,7 @@
 
 [fetch]
 	recurseSubmodules = on-demand
+	prune = true
 
 [log]
 	abbrevCommit = true
@@ -132,5 +136,17 @@
 	newHighlight = green bold 22
 
 [pager]
-	diff = diff-so-fancy | less --tabs=1,5 -RFX
-	show = diff-so-fancy | less --tabs=1,5 -RFX
+	diff = diff-so-fancy | less --tabs=4 -RFX
+	show = diff-so-fancy | less --tabs=4 -RFX
+[core]
+	pager = diff-so-fancy | less --tabs=4 -RFX
+[interactive]
+	diffFilter = diff-so-fancy --patch
+[color "diff"]
+	meta = 11
+	frag = magenta bold
+	func = 146 bold
+	commit = yellow bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
