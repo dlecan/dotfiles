@@ -1,22 +1,19 @@
 [user]
-    name = Damien Lecan
-    email = dev@dlecan.com
-	  signingkey = B9E1EE3FE5697052
+   name = Damien Lecan
+   email = dev@dlecan.com
+   # signingkey = # no more signing here, must be defined locally
 
-[includeIf "gitdir:~/dev/emblock/"]
-    path = ~/.gitconfig-eb
+[include]
+	path = ~/.gitconfig.local
 
-#[includeIf "gitdir:~/dev/unikname/"]
-#    path = ~/.gitconfig-work
-#
-#[includeIf "gitdir:~/dev/unn/"]
-#    path = ~/.gitconfig-work
-#
-#[includeIf "gitdir:~/dev/spacelephant/"]
-#    path = ~/.gitconfig-work
-#
-#[includeIf "gitdir:~/dev/work/"]
-#    path = ~/.gitconfig-work
+[includeIf "gitdir:~/dev/fgr/"]
+   path = ~/.gitconfig-work
+
+[includeIf "gitdir:~/dev/d4b/"]
+   path = ~/.gitconfig-work
+
+[includeIf "gitdir:~/dev/work/"]
+   path = ~/.gitconfig-work
 
 [branch]
     autosetuprebase = always

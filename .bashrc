@@ -125,5 +125,9 @@ if [ -e "$HOME/.bashrc.d" ]; then
   done
 fi
 
+if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
+        source /etc/profile.d/vte.sh
+fi
+
 # Mainly for 'ls': dispay ISO dates
 export TIME_STYLE=long-iso

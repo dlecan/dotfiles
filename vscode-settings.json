@@ -51,6 +51,7 @@
     "emblock",
     "ethereum",
     "evht",
+    "Fruggr",
     "gcloud",
     "Lecan",
     "matomo",
@@ -93,7 +94,6 @@
   "workbench.enableExperiments": false,
   "telemetry.enableTelemetry": false,
   "cSpell.allowCompoundWords": true,
-  "cSpell.enabled": false,
   "search.followSymlinks": false,
   "search.exclude": {
     "**/node_modules/**": true,
@@ -147,5 +147,11 @@
   "window.zoomLevel": 1,
   "GitLive.Issue tracker integration": "Disabled",
   "GitLive.Hide my activity graph": true,
-  "git.autofetch": true
+  "git.autofetch": true,
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": false,
+    "plaintext": false,
+    "markdown": true
+  },
 }

@@ -2,7 +2,7 @@
 
 set -x
 
-dotfiles=(".bashrc" ".editorconfig" ".gitconfig" ".my-git-bash-configuration" ".profile")
+dotfiles=(".bashrc" ".editorconfig" ".gitconfig" ".bash_profile" ".profile" ".gitconfig-work" ".bashrc.d")
 
 dir=`pwd`
 
@@ -11,4 +11,4 @@ for dotfile in "${dotfiles[@]}";do
 done
 
 # VS Code
-ln -s vscode-settings.json "$HOME/.config/Code/User/settings.json"
+ln -s "$dir/vscode-settings.json" "$HOME/.config/Code/User/settings.json"

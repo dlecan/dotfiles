@@ -1,0 +1,3 @@
+#!/bin/bash
+
+export FUNCTIONS_CORE_TOOLS_TELEMETRY_OPTOUT=1
